@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { AuthUser } from '@/types/auth';
 import GoogleAccountPicker from '@/components/GoogleAccountPicker';
+import profilePhoto from '@/assets/profile-photo.jpg';
 
 export default function LoginPage() {
   const { login } = useAuth();
@@ -28,7 +29,7 @@ export default function LoginPage() {
         <div className="flex flex-col items-center gap-3">
           <div className="relative">
             <img
-              src="/profile-photo.jpeg"
+              src={profilePhoto}
               alt="Profile"
               className="w-24 h-24 rounded-full object-cover shadow-lg ring-4 ring-red-100"
             />
