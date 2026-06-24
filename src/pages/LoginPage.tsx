@@ -24,10 +24,17 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-red-100 flex items-center justify-center px-4">
       <div className="bg-white rounded-3xl shadow-xl w-full max-w-sm p-10 flex flex-col items-center gap-7">
-        {/* Logo */}
-        <div className="flex flex-col items-center gap-2">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-md">
-            <span className="text-white text-2xl">✓</span>
+        {/* Profile photo + branding */}
+        <div className="flex flex-col items-center gap-3">
+          <div className="relative">
+            <img
+              src="/profile-photo.jpeg"
+              alt="Profile"
+              className="w-24 h-24 rounded-full object-cover shadow-lg ring-4 ring-red-100"
+            />
+            <div className="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-md ring-2 ring-white">
+              <span className="text-white text-xs font-bold">✓</span>
+            </div>
           </div>
           <h1 className="text-2xl font-extrabold text-gray-800 tracking-tight">My To-Do List</h1>
           <p className="text-sm text-gray-400 text-center">Sign in to manage your tasks</p>
