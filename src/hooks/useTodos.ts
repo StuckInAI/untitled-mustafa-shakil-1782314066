@@ -44,6 +44,17 @@ export function useTodos() {
     setTodos(prev => prev.filter(t => t.id !== id));
   }
 
+  function editTodo(id: string, newText: string) {
+    const trimmed = newText.trim();
+    if (!trimmed) {
+      deleteTodo(id);
+      return;
+    }
+    setTodos(prev =>
+      prev.map(t => (t.id === id ? { ...t, text: trimmed } : t))
+    );
+  }
+
   function clearCompleted() {
     setTodos(prev => prev.filter(t => !t.completed));
   }
@@ -56,6 +67,7 @@ export function useTodos() {
 
   const activeCount = todos.filter(t => !t.completed).length;
   const completedCount = todos.filter(t => t.completed).length;
+  const totalCount = todos.length;
 
   return {
     todos,
@@ -65,8 +77,10 @@ export function useTodos() {
     addTodo,
     toggleTodo,
     deleteTodo,
+    editTodo,
     clearCompleted,
     activeCount,
     completedCount,
+    totalCount,
   };
 }
