@@ -1,4 +1,5 @@
 import { useTodos } from '@/hooks/useTodos';
+import { useAuth } from '@/contexts/AuthContext';
 import TodoInput from '@/components/TodoInput';
 import TodoFilter from '@/components/TodoFilter';
 import TodoList from '@/components/TodoList';
