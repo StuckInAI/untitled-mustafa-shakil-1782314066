@@ -22,7 +22,7 @@ export default function TodoPage() {
   const allDone = totalCount > 0 && activeCount === 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-50 via-slate-50 to-indigo-100 flex items-start justify-center pt-14 px-4 pb-16">
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-rose-50 to-pink-100 flex items-start justify-center pt-14 px-4 pb-16">
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-7">
@@ -45,7 +45,7 @@ export default function TodoPage() {
             </div>
             <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
               <div
-                className="h-full bg-gradient-to-r from-violet-400 to-violet-600 rounded-full transition-all duration-500"
+                className="h-full bg-gradient-to-r from-pink-400 to-pink-600 rounded-full transition-all duration-500"
                 style={{ width: `${progressPct}%` }}
               />
             </div>

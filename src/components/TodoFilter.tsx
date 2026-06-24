@@ -30,13 +30,13 @@ export default function TodoFilter({
             onClick={() => onFilterChange(f.value)}
             className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-150 cursor-pointer ${
               filter === f.value
-                ? 'bg-white text-violet-600 shadow-sm'
+                ? 'bg-white text-pink-600 shadow-sm'
                 : 'text-slate-500 hover:text-slate-700'
             }`}
           >
             {f.label}
             {f.value === 'active' && activeCount > 0 && (
-              <span className="ml-1.5 bg-violet-100 text-violet-600 rounded-full px-1.5 py-0.5 text-xs font-bold">
+              <span className="ml-1.5 bg-pink-100 text-pink-600 rounded-full px-1.5 py-0.5 text-xs font-bold">
                 {activeCount}
               </span>
             )}

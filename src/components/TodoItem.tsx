@@ -40,15 +40,15 @@ export default function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemP
   }
 
   return (
-    <li className="group flex items-center gap-3 px-4 py-3 bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-md hover:border-violet-100 transition-all duration-150">
+    <li className="group flex items-center gap-3 px-4 py-3 bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-md hover:border-pink-100 transition-all duration-150">
       {/* Checkbox */}
       <button
         onClick={() => onToggle(todo.id)}
         aria-label={todo.completed ? 'Mark as active' : 'Mark as completed'}
         className={`w-6 h-6 rounded-full border-2 flex-shrink-0 flex items-center justify-center transition-all duration-200 cursor-pointer ${
           todo.completed
-            ? 'bg-violet-500 border-violet-500'
-            : 'border-slate-300 hover:border-violet-400 hover:bg-violet-50'
+            ? 'bg-pink-500 border-pink-500'
+            : 'border-slate-300 hover:border-pink-400 hover:bg-pink-50'
         }`}
       >
         {todo.completed && (
@@ -66,7 +66,7 @@ export default function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemP
           onChange={e => setEditValue(e.target.value)}
           onBlur={commitEdit}
           onKeyDown={handleKeyDown}
-          className="flex-1 text-sm text-slate-700 bg-violet-50 border border-violet-300 rounded-lg px-2 py-1 focus:outline-none focus:ring-2 focus:ring-violet-400"
+          className="flex-1 text-sm text-slate-700 bg-pink-50 border border-pink-300 rounded-lg px-2 py-1 focus:outline-none focus:ring-2 focus:ring-pink-400"
         />
       ) : (
         <span
@@ -87,7 +87,7 @@ export default function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemP
         <button
           onClick={startEdit}
           aria-label="Edit task"
-          className="opacity-0 group-hover:opacity-100 text-slate-300 hover:text-violet-400 transition-all duration-150 cursor-pointer p-1 rounded"
+          className="opacity-0 group-hover:opacity-100 text-slate-300 hover:text-pink-400 transition-all duration-150 cursor-pointer p-1 rounded"
           title="Edit"
         >
           <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
